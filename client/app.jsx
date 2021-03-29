@@ -1,5 +1,7 @@
 import React from 'react';
 import Home from './pages/home';
+import NavBar from './pages/navbar'
+import LandingPage from './pages/landingPage'
 import parseRoute from './pages/parseroute';
 
 export default class App extends React.Component {
@@ -44,6 +46,14 @@ export default class App extends React.Component {
       return (
         <div id="container">
           <NavBar userId={this.state.userId}></NavBar>
+          {this.renderPage()}
+        </div>
+      )
+    }
+    if (route.path === ""){
+      return (
+        <div id = 'container'>
+          <NavBar userId = {this.state.userId}></NavBar>
           {this.renderPage()}
         </div>
       )
