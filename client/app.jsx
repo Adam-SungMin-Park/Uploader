@@ -49,6 +49,7 @@ export default class App extends React.Component {
     if (route.path !== "") {
       return (
         <div id="container">
+          <NavBar userId={this.state.userId}></NavBar>
           {this.renderPage()}
         </div>
       )
