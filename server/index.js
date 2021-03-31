@@ -1,10 +1,11 @@
 require('dotenv/config');
 const express = require('express');
 const staticMiddleware = require('./static-middleware');
-const argon2 = require('argon2');
+const app = express();
+/*const argon2 = require('argon2');
 const jsonMiddleware = express.json();
 const pg = require('pg');
-const app = express();
+
 const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
   ssl:{
@@ -40,7 +41,7 @@ app.post('/api/itmes',(req,res)=>{
   .catch(err => {return err})
 
 })
-
+*/
 
 
 app.listen(process.env.PORT, () => {
