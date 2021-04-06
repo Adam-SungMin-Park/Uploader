@@ -16,14 +16,14 @@ export default class AddItem extends React.Component{
     return(
       <div className = "addItemContainer">
         <div className = "addItemHeading">
-          Add New Item
+          Add New Item 123
           <form id = "addItemForm">
             <div className = "addItemName">
-              Item Name
+              Item Name123
               <input type = "string" ></input>
             </div>
             <div className = "addItemPrice">
-              Price
+              Price 123
               <input type = "number"></input>
             </div>
             <div className = "addItemImage">

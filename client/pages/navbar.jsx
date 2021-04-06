@@ -1,17 +1,24 @@
 import React from 'react';
 
 export default class NavBar extends React.Component  {
-  constructor (props) {
-    super(props)
-    this.state = {
-      userId : this.props.userId
-    }
-
-  }
   render(){
+    console.log("hiho!!!!!!!")
     return(
-      <div id = "navBarContainer">
-        <a className = "tab" href = "#home"><span className = "material-icons md-60">fitness_center</span></a>
+      <div className = "test">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
       </div>
     )
   }
