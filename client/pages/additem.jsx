@@ -1,3 +1,4 @@
+import e from "express";
 import React from "react";
 
 export default class AddItem extends React.Component{
@@ -10,9 +11,36 @@ export default class AddItem extends React.Component{
       itemQty:"",
       itemImage:""
     }
+    this.handleNameChange = this.handleNameChange.bind(this)
+    this.handlePriceChange = this.handlePriceChange.bind(this)
+    this.handleImageChange = this.handleImageChange.bind(this)
+    this.handleQtyChange = this.handleQtyChange.bind(this)
   }
 
+ /* handleNameChange(){
+    this.setState({
+      itemName:e.target.value
+    })
+  }
+  handlePriceChange(){
+    this.setState({
+      itemPrice:e.target.value
+    })
+  }
+  handleImageChange(){
+
+
+  }
+  handleQtyChange(){
+    this.setState({
+      itemQty : e.target.value
+    })
+  }
+*/
+
+
   render(){
+    console.log(this.state)
     return(
       <div className = "addItemContainer">
         <div className = "addItemHeading">
@@ -20,19 +48,19 @@ export default class AddItem extends React.Component{
           <form id = "addItemForm">
             <div className = "addItemName">
               Item Name
-              <input type = "string" ></input>
+              <input required type = "string" value = {this.state.itemName} onChange = {this.handleNameChange} ></input>
             </div>
             <div className = "addItemPrice">
               Price
-              <input type = "number"></input>
+              <input required type="number" value={this.state.itemPrice} onChange={this.handlePriceChange}></input>
             </div>
             <div className = "addItemImage">
               Image
-              <input type="file"></input>
+              <input required type="file" value={this.state.itemImage} onChange={this.handleImageChange}></input>
             </div>
             <div className = "addItemQty">
               Qty
-              <input type = "number"></input>
+              <input  required type="number" value={this.state.itemQty} onChange={this.handleQtyChange}></input>
             </div>
           </form>
         </div>
