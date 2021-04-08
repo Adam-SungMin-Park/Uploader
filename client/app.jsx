@@ -4,6 +4,7 @@ import NavBar from './pages/navbar'
 import LandingPage from './pages/landingPage'
 import parseRoute from './pages/parseroute';
 import AddItem from './pages/additem';
+import EditItem from './pages/edit';
 
 export default class App extends React.Component {
   constructor(props){
@@ -37,6 +38,9 @@ export default class App extends React.Component {
     if(route.path === "add"){
       return <AddItem/>
     }
+    if(route.path === "edit"){
+      return <EditItem/>
+    }
 
   }
 
@@ -46,7 +50,7 @@ export default class App extends React.Component {
     const {route} = this.state
     if (route.path !== "") {
       return (
-        <div className="container-sm">
+        <div className="container-lg">
           <NavBar userId={this.state.userId}></NavBar>
           {this.renderPage()}
         </div>
@@ -54,7 +58,7 @@ export default class App extends React.Component {
     }
     if (route.path === ""){
       return (
-        <div className = "container-sm">
+        <div className = "container-lg">
           <NavBar userId = {this.state.userId}></NavBar>
           {this.renderPage()}
         </div>

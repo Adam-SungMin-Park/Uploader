@@ -10,32 +10,35 @@ export default class AddItem extends React.Component{
       itemQty:"",
       itemImage:""
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(){
+    console.log("submitting!")
+
   }
 
   render(){
     return(
-      <div className = "container-sm">
-        <div className = "addItemHeading">
-          Add New Item
-          <form id = "addItemForm">
-            <div className = "addItemName">
-              Item Name
-              <input className="form-control" type="text" placeholder="Item Name" aria-label="default input example"></input>
-            </div>
-            <div className = "addItemPrice">
-              Price
-              <input className="form-control" type="number" placeholder="Item Price" aria-label="default input example"></input>
-            </div>
-           <div class="mb-3">
-              <label for="formFile" class="form-label">Item Image</label>
-              <input className="form-control" type="file" id="imageFile"></input>
-            </div>
-            <div className = "addItemQty">
-              Qty
-              <input type = "number"></input>
-            </div>
-          </form>
-        </div>
+      <div className = "container">
+        <form id = "addItemForm">
+          <div className = "addItemName">
+            Item Name
+            <input required className="form-control" type="text" placeholder="Item Name" aria-label="default input example"></input>
+          </div>
+          <div className = "addItemPrice">
+            Price
+            <input required min = "0" className="form-control" type="number" placeholder="Item Price" aria-label="default input example"></input>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Item Image</label>
+            <input required className="form-control" type="file" id="imageFile"></input>
+          </div>
+          <div className = "addItemQty">
+            Qty
+            <input required min="0" className="form-control" type="number" placeholder="QTY" aria-label="default input example"></input>
+          </div>
+            <button href="#home" onClick ={this.handleSubmit} type="button" className="btn btn-primary btn-lg"><a href="#home">Add</a></button>
+        </form>
       </div>
     )
   }
