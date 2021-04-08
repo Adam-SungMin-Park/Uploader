@@ -11,10 +11,41 @@ export default class NavBar extends React.Component  {
   render(){
     return(
       <div id = "navBarContainer">
+
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="#">Inventory</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#add">Add Items</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#orders">Orders</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#setting">Setting</a>
+                </li>
+              </ul>
+              <form className="d-flex">
+                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
+                <button className="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
         <a className = "tab" href = "#home"><span className = "material-icons md-60">home</span></a>
         <a className = "tab" href = "#cart"><span className = "material-icons md-60">shopping_cart</span></a>
         <a className = "tab" href = "#add"><span className = "material-icons md-60">post_add</span> </a>
         <a className = "tab" href = "#order"><span className = "material-icons md-60">list_alt</span></a>
+
       </div>
     )
   }
