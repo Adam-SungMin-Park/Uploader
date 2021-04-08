@@ -30,10 +30,8 @@ export default class App extends React.Component {
   }
   renderPage(){
     const { route } = this.state
-    if(route.path === ""){
-      return <LandingPage/>
-    }
-    if(route.path === "home"){
+
+    if(route.path === "home" || route.path === ""){
       return <Home/>
     }
     if(route.path === "add"){
@@ -48,7 +46,7 @@ export default class App extends React.Component {
     const {route} = this.state
     if (route.path !== "") {
       return (
-        <div id="container">
+        <div className="container-sm">
           <NavBar userId={this.state.userId}></NavBar>
           {this.renderPage()}
         </div>
@@ -56,7 +54,7 @@ export default class App extends React.Component {
     }
     if (route.path === ""){
       return (
-        <div id = 'container'>
+        <div className = "container-sm">
           <NavBar userId = {this.state.userId}></NavBar>
           {this.renderPage()}
         </div>
