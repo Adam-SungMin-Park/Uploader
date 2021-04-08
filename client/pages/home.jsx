@@ -9,7 +9,17 @@ export default class Home extends React.Component {
       itemPrice:[]
     }
   }
+  /*componentDidMount(){
+    fetch('/api/items').then(res=> res.json())
+    .then(res => {
+      for (var i = 0 ; i < res.length ; i++){
 
+      }
+    })
+
+    })
+  }
+  */
 
 
   render(){
@@ -29,7 +39,7 @@ export default class Home extends React.Component {
     return(
       <>
       <div className = "homeContainer">
-        {this.state.itemPicture}
+
       </div>
       </>
     )
