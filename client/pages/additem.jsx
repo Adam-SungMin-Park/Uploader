@@ -16,8 +16,6 @@ export default class AddItem extends React.Component{
   }
   handleSubmit(){
     console.log("submitting!")
-
-
   }
 
 
