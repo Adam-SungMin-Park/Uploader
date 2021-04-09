@@ -27,9 +27,14 @@ export default class AddItem extends React.Component{
       itemPrice:e.target.value
     })
   }
+<<<<<<< HEAD
+  handleSubmit(){
+    console.log("submitting!")
+=======
   handleImageChange(){
 
 
+>>>>>>> 24793432bfaaae32a30d52112e965875fa98ef6a
   }
   handleQtyChange(){
     this.setState({
