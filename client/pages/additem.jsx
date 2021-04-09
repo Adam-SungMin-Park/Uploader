@@ -20,7 +20,7 @@ export default class AddItem extends React.Component{
 
   }
 
- 
+
 
 
   render(){
@@ -46,29 +46,6 @@ export default class AddItem extends React.Component{
           </div>
             <button href="#home" onClick ={this.handleSubmit} type="button" className="btn btn-primary btn-lg"><a href="#home">Add</a></button>
         </form>
-      <div className = "addItemContainer">
-        <div className = "addItemHeading">
-          Add New Item
-          <form id = "addItemForm">
-            <div className = "addItemName">
-              Item Name
-              <input required type = "string" value = {this.state.itemName} onChange = {this.handleNameChange} ></input>
-            </div>
-            <div className = "addItemPrice">
-              Price
-              <input required type="number" value={this.state.itemPrice} onChange={this.handlePriceChange}></input>
-            </div>
-            <div className = "addItemImage">
-              Image
-              <input required type="file" value={this.state.itemImage} onChange={this.handleImageChange}></input>
-            </div>
-            <div className = "addItemQty">
-              Qty
-              <input  required type="number" value={this.state.itemQty} onChange={this.handleQtyChange}></input>
-            </div>
-          </form>
-        </div>
-
       </div>
     )
   }

@@ -9,40 +9,29 @@ export default class Home extends React.Component {
       itemPrice:[]
     }
   }
-  /*componentDidMount(){
-    fetch('/api/items').then(res=> res.json())
-    .then(res => {
-      for (var i = 0 ; i < res.length ; i++){
-
-      }
-    })
-
-    })
-  }
-  */
-
 
   render(){
     if(this.state.itemName.length === 0 ){
       return (
         <>
-      <div className = "homeContainer">
-        <div className = "items">
-          <h1>No data present</h1>
-        </div>
-        <a href = "#add"><button className = "addButton">Add Entry</button></a>
-      </div>
+          <div className = "homeContainer">
+            <div className = "items">
+              <h1>No data present</h1>
+            </div>
+            <a href = "#add"><button className = "addButton">Add Entry</button></a>
+          </div>
         </>
       );
   }
-  else{
-    return(
-      <>
-      <div className = "homeContainer">
-
-      </div>
-      </>
-    )
+    else
+    {
+      return
+      (
+        <>
+          <div className = "homeContainer">
+          </div>
+        </>
+      )
+    }
   }
-}
 }
