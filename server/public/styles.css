@@ -1,3 +1,7 @@
-.container{
-  padding-top:2rem;
+.material-icons.md-60{
+font-size:60px;
+}
+#navBarContainer{
+  display:flex;
+  justify-content: space-evenly;
 }
